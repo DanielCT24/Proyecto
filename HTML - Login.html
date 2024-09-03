@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="CSS - Login.css">
+    <link rel="stylesheet" href="CSS - Transitions.css">
+    <script src="JS - Session.js" defer></script> <!-- Nuevo archivo de sesión -->
+<script src="JS - Transitions.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        window.onload = function() {
+            const isAuthenticated = localStorage.getItem('isAuthenticated');
+            if (isAuthenticated === 'true') {
+                // Si el usuario ya está logueado, redirigirlo al menú
+                window.location.href = 'HTML-MENU.html';
+            }
+        };
+
+        function handleLogin(event) {
+            event.preventDefault();
+
+            // Verificar credenciales (esto debería ser tu lógica de autenticación)
+            // Si el login es exitoso:
+            localStorage.setItem('isAuthenticated', 'true');
+        }
+    </script>
+</head>
+<body>
+    <form id="loginForm">
+        <h2>Iniciar Sesión</h2>
+        <label for="loginIdentifier">Nombre de usuario o Correo electrónico:</label>
+        <input type="text" id="loginIdentifier" required>
+        <label for="loginPassword">Contraseña:</label>
+        <input type="password" id="loginPassword" required>
+        <button type="submit">Iniciar Sesión</button>
+        <p>¿No tienes una cuenta? <a href="HTML - Register.html">Regístrate aquí</a></p>
+    </form>
+
+    <script src="JS - Login.js"></script>
+</body>
+</html>

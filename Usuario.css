@@ -1,0 +1,247 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f4f4;
+    font-family: 'Poppins'; 
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+h3 {
+    position: fixed;
+    bottom: 0; /* Alinea el texto en la parte baja del contenedor */
+    font-size: 12px;
+    opacity: 20%;
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+span#userEmail {
+    text-transform: none;
+}
+
+.user-card {
+    background-color: #4d4949;
+    color: #fff;
+    width: 300px; /* Tamaño más grande para la tarjeta */
+    padding: 30px;
+    position: fixed;
+    left: 0; /* Mover la tarjeta al margen izquierdo */
+    top: 0;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    width: 150px; /* Aumentar tamaño del avatar */
+    height: 150px; /* Aumentar tamaño del avatar */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    top: 10px;
+}
+
+.user-info {
+    text-align: center;
+}
+
+.user-info p {
+    margin: 15px 0;
+    font-size: 16px; /* Tamaño más grande del texto */
+    text-transform: uppercase;
+}
+
+.user-info strong {
+    display: block;
+    font-size: 20px; /* Tamaño del texto de las etiquetas */
+    text-transform: capitalize; /* Convertir texto a mayúsculas */
+}
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
+}
+
+.logout-button {
+    position: fixed;
+    bottom: 24px; /* Ajusta la distancia desde el borde inferior según lo necesites */
+    left: 20px;   /* Ajusta la distancia desde el borde izquierdo según lo necesites */
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    z-index: 1000; /* Asegúrate de que el botón esté por encima de otros elementos */
+    margin-left: 86px;
+}
+
+
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+
+
+@media(max-width: 991px){
+
+.user-card {
+    background-color: #4d4949;
+    color: #fff;
+    width: 82px; /* Tamaño más grande para la tarjeta */
+    padding: 30px;
+    position: fixed;
+    left: 0; /* Mover la tarjeta al margen izquierdo */
+    top: 0;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.user-info p {
+    margin: 15px 0;
+    font-size: 12px; /* Tamaño más grande del texto */
+    text-transform: uppercase;
+    
+}
+
+.user-info strong {
+    display: block;
+    font-size: 14px; /* Tamaño del texto de las etiquetas */
+    text-transform: capitalize; /* Convertir texto a mayúsculas */
+}
+
+
+
+.avatar {
+    width: 100px; /* Aumentar tamaño del avatar */
+    height: 100px; /* Aumentar tamaño del avatar */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+}
+
+.logout-button {
+    position: fixed;
+    bottom: 24px; /* Ajusta la distancia desde el borde inferior según lo necesites */
+    left: -73px;   /* Ajusta la distancia desde el borde izquierdo según lo necesites */
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    z-index: 1000; /* Asegúrate de que el botón esté por encima de otros elementos */
+    margin-left: 86px;
+}
+
+    span#userEmail {
+        display: inline-block; /* Asegura que el elemento se comporte correctamente con el truncamiento */
+        max-width: 120px;
+        overflow: hidden; /* Oculta el texto que sobrepasa el ancho */
+        white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+        text-overflow: ellipsis; /* Añade los puntos suspensivos al texto que se trunca */
+    }
+
+
+
+    
+}
+
+
+
+
+
+/* ----------------------------------------TRANSICIÓN------------------------------------------------------------ */
+
+
+
+
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 50px;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader img {
+    width: 500px;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader img {
+    width: 500px;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
