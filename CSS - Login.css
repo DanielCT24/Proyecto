@@ -654,3 +654,21 @@ main {
     text-align: center; /* Centra el texto dentro del contenedor */
 }
 
+/* Ajustes para la vista responsive */
+
+@media screen and (max-width: 850px) {
+    .contenedor__login-register {
+        top: 0; /* Ajusta la posición según sea necesario */
+        left: 0; /* Ajusta la posición según sea necesario */
+        margin: auto;
+        z-index: 1000; /* Asegúrate de que el contenedor esté encima de otros elementos */
+    }
+
+    .contenedor__login-register form {
+        position: relative; /* Asegúrate de que el formulario esté correctamente posicionado */
+        padding: 20px; /* Ajusta el padding si es necesario */
+    }
+
+    /* Otros ajustes para la vista responsive si es necesario */
+}
+
